@@ -389,4 +389,16 @@ class Mighty_ARCGIS_extractor:
             else:
                 pass
     
-        
+
+def ppath_maker():
+    for root, dirs, files in os.walk('C:\\'):
+        for dir_ in dirs:
+            if dir_.endswith("proj"):
+                l = os.path.join(root, dir_)
+                d = l.split('\\')
+                #print(d)
+                #sys.exit()
+                test = d[len(d) - 2]
+                #print(test)
+                if test.endswith("share"):
+                    return l
