@@ -9,7 +9,8 @@ import sys
 import datetime
 import utilis_ as ut
 import pyproj as proj
-ppath = "C:/Users/RaherimanantsoaMichel/.conda/envs/SPICES_TSIIRO/Library/share/proj"
+#ppath = "C:/Users/RaherimanantsoaMichel/.conda/envs/SPICES_TSIIRO/Library/share/proj"
+ppath = ut.ppath_maker()
 proj.datadir.set_data_dir(ppath)
 
 inputs = sys.argv
